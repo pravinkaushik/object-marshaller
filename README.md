@@ -1,5 +1,4 @@
-import ObjToXML
-import ObjToJSON
+from object_marshaller import ObjToXML, ObjToJSON
 
 # Define sample class
 class TestClass:
@@ -16,7 +15,7 @@ class TestClassInsideInside:
         self.TestClassInsideInside_1 = c
         self.TestClassInsideInside_2 = d
 
-# Creating object
+# Creating object for xml
 xx = TestClassInsideInside("5T","6T")
 yy = TestClassInsideInside("5A","6A")
 zz = TestClassInsideInside("5B","6B")
@@ -25,7 +24,7 @@ v = TestClass(4, x)
 # convert to xml
 print(ObjToXML.format_to_xml(v))
 
-# Creating object
+# Creating object for json
 xx = TestClassInsideInside("5T","6T")
 yy = TestClassInsideInside("5A","6A")
 zz = TestClassInsideInside("5B","6B")
@@ -33,4 +32,3 @@ x = TestClassInside(3, (xx, yy, zz))
 v = TestClass(4, x)
 # convert to Json
 print(ObjToJSON.format_to_json(v))
-
