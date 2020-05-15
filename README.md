@@ -1,34 +1,34 @@
 from object_marshaller import ObjToXML, ObjToJSON
 
 # Define sample class
-class TestClass:
-    def __init__(self, c, d):
-        self.TestClass_1 = c
-        self.TestClass_2 = d
-class TestClassInside:
-    def __init__(self, c, d):
-        self.TestClassInside_1 = c
-        self.TestClassInside_2 = d
-
-class TestClassInsideInside:
-    def __init__(self, c, d):
-        self.TestClassInsideInside_1 = c
-        self.TestClassInsideInside_2 = d
-
-# Creating object for xml
-xx = TestClassInsideInside("5T","6T")
-yy = TestClassInsideInside("5A","6A")
-zz = TestClassInsideInside("5B","6B")
-x = TestClassInside("5T", (xx, yy, zz))
-v = TestClass(4, x)
-# convert to xml
-print(ObjToXML.format_to_xml(v))
-
-# Creating object for json
-xx = TestClassInsideInside("5T","6T")
-yy = TestClassInsideInside("5A","6A")
-zz = TestClassInsideInside("5B","6B")
-x = TestClassInside(3, (xx, yy, zz))
-v = TestClass(4, x)
-# convert to Json
-print(ObjToJSON.format_to_json(v))
+class TestClass:<br />
+    def __init__(self, c, d):<br />
+        self.TestClass_1 = c<br />
+        self.TestClass_2 = d<br />
+class TestClassInside:<br />
+    def __init__(self, c, d):<br />
+        self.TestClassInside_1 = c<br />
+        self.TestClassInside_2 = d<br />
+<br />
+class TestClassInsideInside:<br />
+    def __init__(self, c, d):<br />
+        self.TestClassInsideInside_1 = c<br />
+        self.TestClassInsideInside_2 = d<br />
+<br />
+# Creating object for xml<br />
+xx = TestClassInsideInside("5T","6T")<br />
+yy = TestClassInsideInside("5A","6A")<br />
+zz = TestClassInsideInside("5B","6B")<br />
+x = TestClassInside("5T", (xx, yy, zz))<br />
+v = TestClass(4, x)<br />
+# convert to xml<br />
+print(ObjToXML.format_to_xml(v))<br />
+<br />
+# Creating object for json<br />
+xx = TestClassInsideInside("5T","6T")<br />
+yy = TestClassInsideInside("5A","6A")<br />
+zz = TestClassInsideInside("5B","6B")<br />
+x = TestClassInside(3, (xx, yy, zz))<br />
+v = TestClass(4, x)<br />
+# convert to Json<br />
+print(ObjToJSON.format_to_json(v))<br />
